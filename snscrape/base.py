@@ -131,13 +131,13 @@ class Scraper:
 	name = None
 
 	def __init__(self, retries = 3):
-		proxies = {
-			"http": "http://WEC26XXCO9E43VPD9SK6WV9MQ09E3EVCQVEJ2DNJAGQLC7RG2B3YT9QBFTMYNOLPW5S1XLLQFDYP2R4N:render_js=True@proxy.scrapingbee.com:8886",
-			"https": "https://WEC26XXCO9E43VPD9SK6WV9MQ09E3EVCQVEJ2DNJAGQLC7RG2B3YT9QBFTMYNOLPW5S1XLLQFDYP2R4N:render_js=True@proxy.scrapingbee.com:8887"
-		}
+# 		proxies = {
+# 			"http": "http://WEC26XXCO9E43VPD9SK6WV9MQ09E3EVCQVEJ2DNJAGQLC7RG2B3YT9QBFTMYNOLPW5S1XLLQFDYP2R4N:render_js=True@proxy.scrapingbee.com:8886",
+# 			"https": "https://WEC26XXCO9E43VPD9SK6WV9MQ09E3EVCQVEJ2DNJAGQLC7RG2B3YT9QBFTMYNOLPW5S1XLLQFDYP2R4N:render_js=True@proxy.scrapingbee.com:8887"
+# 		}
 		self._retries = retries
 		self._session = requests.Session()
-		self._session.proxies = proxies
+# 		self._session.proxies = proxies
 		#self._session.verify = False
 		
 
