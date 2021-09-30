@@ -138,7 +138,7 @@ class Scraper:
 		self._retries = retries
 		self._session = requests.Session()
 		self._session.proxies = proxies
-		self._session.verify = False
+		#self._session.verify = False
 		
 
 	@abc.abstractmethod
