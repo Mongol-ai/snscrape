@@ -8,6 +8,7 @@ import logging
 import requests
 import time
 import warnings
+from fp.fp import FreeProxy
 
 
 logger = logging.getLogger(__name__)
@@ -131,8 +132,9 @@ class Scraper:
 	name = None
 
 	def __init__(self, retries = 3):
+		proxy = FreeProxy().get()
 		proxies = {
-			"http": "http://20.81.106.180:8888"
+			"http": proxy
 # 			"http": "http://WEC26XXCO9E43VPD9SK6WV9MQ09E3EVCQVEJ2DNJAGQLC7RG2B3YT9QBFTMYNOLPW5S1XLLQFDYP2R4N:render_js=False@proxy.scrapingbee.com:8886",
 # 			"https": "https://WEC26XXCO9E43VPD9SK6WV9MQ09E3EVCQVEJ2DNJAGQLC7RG2B3YT9QBFTMYNOLPW5S1XLLQFDYP2R4N:render_js=False@proxy.scrapingbee.com:8887"
 		}
