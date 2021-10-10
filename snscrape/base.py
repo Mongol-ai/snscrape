@@ -12,6 +12,7 @@ from fp.fp import FreeProxy
 
 
 logger = logging.getLogger(__name__)
+proxy = FreeProxy().get()
 
 
 class _DeprecatedProperty:
@@ -132,11 +133,8 @@ class Scraper:
 	name = None
 
 	def __init__(self, retries = 3):
-		proxy = FreeProxy().get()
 		proxies = {
 			"http": proxy
-# 			"http": "http://WEC26XXCO9E43VPD9SK6WV9MQ09E3EVCQVEJ2DNJAGQLC7RG2B3YT9QBFTMYNOLPW5S1XLLQFDYP2R4N:render_js=False@proxy.scrapingbee.com:8886",
-# 			"https": "https://WEC26XXCO9E43VPD9SK6WV9MQ09E3EVCQVEJ2DNJAGQLC7RG2B3YT9QBFTMYNOLPW5S1XLLQFDYP2R4N:render_js=False@proxy.scrapingbee.com:8887"
 		}
 		self._retries = retries
 		self._session = requests.Session()
